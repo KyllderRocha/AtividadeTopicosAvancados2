@@ -1,3 +1,4 @@
+package Metodo1;
 
 public class ProcessadorDeInvestimentos {
 	public static void main(String[] args) {
@@ -5,8 +6,9 @@ public class ProcessadorDeInvestimentos {
 		ContasDAO dao = new ContasDAO();
 		
         for (Conta conta : dao.getConta()) {
-            //conta.rende();
-            System.out.println("Novo Saldo:");
+            conta.rende();
+            String tipo = conta instanceof ContaComum ? "Conta Comum" : "Conta Estudante";
+            System.out.println("Novo Saldo: ("+ tipo +")");
             System.out.println(conta.getSaldo());
         }
     }

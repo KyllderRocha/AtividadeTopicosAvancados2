@@ -1,9 +1,14 @@
+package Metodo2;
 
 public abstract class Conta {
 	protected double saldo;
 
     public Conta() {
         this.saldo = 0;
+    }
+    
+    public Conta(double saldo) {
+        this.saldo = saldo;
     }
     
     public void deposita(double valor) throws Exception {
@@ -15,4 +20,5 @@ public abstract class Conta {
     public double getSaldo() {
         return saldo;
     }
+    
 }
